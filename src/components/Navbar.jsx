@@ -2,7 +2,8 @@ import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaSearch, FaShoppingCart, FaUser, FaPhone } from 'react-icons/fa';
 import { CgMail } from 'react-icons/cg';
 import logo from '../logo/devopsfarm-logo-1500x1500 (1).png';
-
+import { Link } from 'react-router-dom';
+import { PiBabyBold } from "react-icons/pi";
 const Navbar = () => {
   return (
     <header className="bg-yellow-500 p-2 text-white">
@@ -26,7 +27,8 @@ const Navbar = () => {
         <div className="flex flex-col md:flex-row justify-between items-center max-w-screen-xl mx-auto space-y-2 md:space-y-0">
           <a href="/" className="flex items-center space-x-2">
             <img src={logo} alt="Toyzone Logo" className="h-12" />
-            <h1 className='text-blue-600 font-bold text-4xl italic'>BabyCry</h1>
+            <h1 className="text-blue-600 font-bold text-4xl italic whitespace-nowrap flex items-center" >B<PiBabyBold className='h-7 mt-2 mx-0' />byCry</h1>
+
           </a>
           <div className="relative w-full max-w-md">
             <input
@@ -50,6 +52,12 @@ const Navbar = () => {
             <a href="#" className="hover:text-yellow-500">Blogs</a>
             <a href="#" className="hover:text-yellow-500">Our Story</a>
             <a href="#" className="hover:text-yellow-500">Support</a>
+            <Link to='/' className="hover:text-yellow-500">Product</Link>
+            <Link to='/admin' className="hover:text-yellow-500">Admin</Link>
+            <Link to='/' className="hover:text-yellow-500">Product</Link>
+            <Link to='/products' className="hover:text-yellow-500">Products</Link>
+            <Link to='/login' className="hover:text-yellow-500">Login</Link>
+            <Link to='/register' className="hover:text-yellow-500">Register</Link>
           </div>
           <a href="#" className="bg-yellow-500 text-white px-4 py-2 rounded-full hover:bg-yellow-600">Bulk Orders</a>
         </div>
